@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #5F9EA0;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+  gap: 20px; /* Elemanlar arası boşluk */
+}
+
+/* Sol bölüm: geri tuşu ve proje adı */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0; /* küçülmesin */
+}
+
+/* Orta esnek boşluk, varsa kullan */
+.navbar-spacer {
+  flex-grow: 1;
+}
+
+/* Sağ bölüm: linkler, butonlar, ikonlar */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+  max-width: 50%;
+  min-width: 150px;
+  overflow-x: auto;
+  justify-content: flex-end; /* Sağ tarafa yasla */
+}
+
+
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #2F4F4F;
+}
+
+/* İkon boyutu kontrolü */
+.navbar img,
+.navbar svg {
+  height: 24px;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.navbar-icon {
+width: 50px;
+ height: 50px;
+  margin-right: 0px;
+  padding: 0px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-icon:hover {
+  background-color: #2F4F4F;
+}
